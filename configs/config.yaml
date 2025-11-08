@@ -1,0 +1,75 @@
+# Smart Visual Commerce Platform Configuration
+
+# Paths
+paths:
+  data_dir: "data"
+  raw_data: "data/raw"
+  processed_data: "data/processed"
+  embeddings_dir: "data/embeddings"
+  metadata_dir: "data/metadata"
+  models_dir: "models"
+
+# Dataset Configuration
+dataset:
+  name: "fashion_product_images"
+  image_size: [224, 224]
+  batch_size: 32
+  train_split: 0.8
+  val_split: 0.1
+  test_split: 0.1
+
+# Model Configuration
+models:
+  clip:
+    model_name: "ViT-B/32"
+    device: "cpu"  # Change to "cuda" if GPU available
+
+  vlm:
+    provider: "openai"  # Options: "openai", "gemini"
+    model: "gpt-4o-mini"  # or "gemini-pro-vision"
+    max_tokens: 500
+    temperature: 0.7
+
+# Search Configuration
+search:
+  top_k: 10
+  similarity_threshold: 0.5
+  index_type: "faiss"  # Options: "faiss", "chromadb"
+
+# Recommendation Configuration
+recommendation:
+  algorithm: "hybrid"  # Options: "content", "collaborative", "hybrid"
+  top_n: 5
+  diversity_weight: 0.3
+
+# API Configuration
+api:
+  host: "0.0.0.0"
+  port: 8000
+  reload: true
+  workers: 1
+
+# Streamlit Configuration
+streamlit:
+  page_title: "Smart Visual Commerce Platform"
+  page_icon: "🛍️"
+  layout: "wide"
+
+# Evaluation Metrics
+evaluation:
+  metrics:
+    - "precision_at_k"
+    - "recall_at_k"
+    - "map"
+    - "mrr"
+    - "ndcg"
+  k_values: [1, 5, 10, 20]
+
+# Feature Flags
+features:
+  visual_search: true
+  attribute_extraction: true
+  scene_understanding: true
+  quality_assessment: true
+  review_analysis: true
+  recommendations: true
