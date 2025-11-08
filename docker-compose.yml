@@ -9,6 +9,7 @@ services:
     environment:
       - OPENAI_API_KEY=${OPENAI_API_KEY}
       - GOOGLE_API_KEY=${GOOGLE_API_KEY}
+
     volumes:
       - ./data:/app/data
       - ./models:/app/models
@@ -22,7 +23,4 @@ services:
     environment:
       - OPENAI_API_KEY=${OPENAI_API_KEY}
       - GOOGLE_API_KEY=${GOOGLE_API_KEY}
-    volumes:
-      - ./data:/app/data
-      - ./models:/app/models
-    restart: unless-stopped
+

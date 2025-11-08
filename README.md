@@ -58,9 +58,6 @@ The **Smart Visual Commerce Platform** is a comprehensive solution that demonstr
 ### 6. 🔬 **Review & Authenticity Analysis**
 - **Review-image matching**: Verify customer review images match products
 - **Fake review detection**: Identify suspicious reviews using visual analysis
-- **Sentiment from visuals**: Extract sentiment from review images
-
-### 7. 📊 **Comprehensive Evaluation**
 - **Search metrics**: MAP, MRR, Precision@K, Recall@K, NDCG@K
 - **Recommendation metrics**: Diversity, coverage, novelty
 - **Visualization**: Confusion matrices, similarity distributions, metric plots
